@@ -8,6 +8,8 @@ Instead of typing three separate git commands, gic asks you what to stage, what 
 
 ## Installation
 ```bash
+git clone https://github.com/dcourtright-dev/gic-p
+cd gic-p
 make
 sudo make install
 ```
