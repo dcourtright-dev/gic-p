@@ -40,6 +40,9 @@ int show_status(void) {
     char output[1024];
     while (fgets(output, sizeof(output), fp) != NULL) {
         printf("%s", output);
+	printf("\nCurrent Branch: ");
+	system("git branch --show-current");
+	printf("\n");
     }
     
     pclose(fp);
