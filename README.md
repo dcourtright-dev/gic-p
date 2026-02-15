@@ -46,6 +46,7 @@ gic -f -v
 
 - Git must be installed
 - Must be run inside a git repository
+- Make (from `build-essential` or otherwise)
 
 ## License
 
