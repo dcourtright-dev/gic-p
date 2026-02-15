@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <unistd.h>
 
 // Return codes
 #define SUCCESS 0
@@ -40,9 +41,8 @@ int show_status(void) {
     char output[1024];
     while (fgets(output, sizeof(output), fp) != NULL) {
         printf("%s", output);
-	printf("\nCurrent Branch: ");
+	printf("Current branch:\n");
 	system("git branch --show-current");
-	printf("\n");
     }
     
     pclose(fp);
