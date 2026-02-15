@@ -19,7 +19,7 @@ void help() {
 	printf("Options:\n");
 	printf("   -f    Force Push\n");
 	printf("   -v    Verbose Output\n");
-	printf("   -h    Show this help\n";
+	printf("   -h    Show this help\n");
 }
 
 // Runs command
@@ -29,7 +29,7 @@ void run(char *cmd, bool show) {
 	}
 
 	int result = system(cmd);
-	if result !=0 {
+	if (result != 0) {
 		fprintf(stderr, "Command Failed: %s\n", cmd);
 	}
 }
@@ -47,7 +47,7 @@ int status() {
 	}
 
 	// Print stdout of git status
-	While (fgets(output, sizeof(output), fp) != NULL) {
+	while (fgets(output, sizeof(output), fp) != NULL) {
 		printf("%s", output);
 	}
 	pclose(fp);
@@ -68,7 +68,7 @@ int commit(char *msg) {
 	snprintf(cmd, sizeof(cmd), "git commit -m \"%s\"", msg);
 	
 	run(cmd, true);
-	return 0
+	return 0;
 }
 
 // Push changes
@@ -85,7 +85,7 @@ int push(bool force, bool verbose) {
 		printf("$ %s\n", cmd);
 	}
 
-	return system(cmd) == 0
+	return system(cmd) == 0;
 }
 
 // Main Script
@@ -125,5 +125,5 @@ int main(int argc, char *argv[]) {
 	printf("Pushing Files...");
 	push(force_push, verbose);
 
-	return 0
+	return 0;
 }
