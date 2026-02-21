@@ -11,6 +11,7 @@
 void print_help(void) {
     printf("Usage: gic [options]\n");
     printf("Options:\n");
+    // TODO: add -n for No message
     printf("  -f    Force push\n");
     printf("  -v    Verbose output\n");
     printf("  -h    Show this help\n");
