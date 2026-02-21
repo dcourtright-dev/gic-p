@@ -52,6 +52,7 @@ int show_status(void) {
 // Stage a file
 int stage_file(const char *filename, bool verbose) {
     char cmd[512];
+    // TODO: add support for . for all files
     snprintf(cmd, sizeof(cmd), "git add %s", filename);
     return run_command(cmd, verbose);
 }
