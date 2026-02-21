@@ -50,6 +50,9 @@ int show_status(void) {
     return SUCCESS;
 }
 
+// TODO: add branch selection
+
+
 // Stage a file
 int stage_file(const char *filename, bool verbose) {
     char cmd[512];
